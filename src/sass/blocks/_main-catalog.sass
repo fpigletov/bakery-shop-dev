@@ -1,0 +1,251 @@
+.main-catalog
+
+    &__breadcrumbs
+        font-size: 18px
+        color: $gray-color
+        margin-bottom: 40px
+        @media (max-width: 600px)
+            margin-bottom: 25px
+            font-size: 16px
+
+    &__body
+        display: flex
+        align-items: flex-start
+        @media (max-width: $md3)
+            flex-direction: column
+            align-items: stretch
+
+    &__filter
+        flex: 0 0 25%
+        margin-right: 30px
+        @media (max-width: $md2)
+            flex: 0 0 235px
+        @media (max-width: $md3)
+            flex: 1 1 100%
+            width: 100%
+            margin-bottom: 30px
+
+    &__products
+        flex: 1 1 75%
+        @media (max-width: $md3)
+            flex: 1 1 100%
+            width: 100%
+
+.filter-catalog
+
+    &__title
+        font-weight: 700
+        font-size: 42px
+        color: $gray-color
+        margin-bottom: 20px
+        @media (max-width: 600px)
+            font-size: 36px
+
+    &__items
+
+    &__item
+        border-bottom: 1px solid $medium-gray-color
+
+    &__btn
+        width: 100%
+        transition: color 0.3s ease
+        span
+            text-align: left
+            padding: 10px
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 20px
+            flex-direction: row-reverse
+            transition: color 0.3s ease
+            &::before
+                padding: 0 10px
+                font-size: 12px
+                transition: transform 0.3s ease
+        &.active
+            color: $pink-color
+            span::before
+                transform: rotate(90deg)
+
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+
+    &__subsection
+        display: none
+        padding-left: 10px
+
+    &__subitem
+        background-color: $white-color        
+        margin-bottom: 10px
+
+    &__sublink
+        color: $gray-color
+        display: flex
+        justify-self: flex-start
+        padding: 5px 5px 5px 20px
+        transition: color 0.3s ease
+        &:hover
+            color: $pink-color
+
+    &__label
+        display: inline-block
+        cursor: pointer
+
+    &__checkbox
+        &:checked + .checkbox-tag::after
+            background-color: $pink-color
+        &:checked + .checkbox-tag::before
+            border-color: $pink-color
+        &:checked + .filter-catalog__tag
+            color: $pink-color
+
+    &__tag
+        padding-left: 20px
+        transition: color 0.3s ease        
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+        
+        &::before
+            top: 0
+            transition: border-color 0.3s ease
+            
+        &::after
+            top: 3px
+            transition: background-color 0.3s ease
+
+.products-catalog
+
+    &__actions
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 30px
+        background-color: $light-gray-color
+        padding: 25px
+
+    &__sort
+        display: flex
+        align-items: center
+
+    &__quantity
+        // display: flex
+        // align-items: center
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+        justify-content: center
+        gap: 30px
+
+    &__item
+        box-shadow: none
+        border: 1px solid $gray-color
+        min-height: 320px
+
+    &__pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 30px
+
+.sort-actions
+    z-index: 50
+
+    &__label
+        margin-right: 10px
+        @media (max-width: 500px)
+            display: none
+
+    &__select
+
+    &__option
+
+    .choices
+        width: 120px
+
+.catalog-label
+
+// .quantity-actions
+//     z-index: 50
+
+//     &__label
+//         margin-right: 10px
+//         @media (max-width: 500px)
+//             display: none
+
+//     &__select
+
+//     &__option
+
+//     .choices
+//         width: 50px
+
+.catalog-pagination
+
+    &__arrow
+        height: 30px
+        flex: 0 0 30px
+        margin: 0 10px
+
+        &_prev
+
+        &_next
+
+    &__number
+        font-size: 14px
+        height: 20px
+        flex: 0 0 20px
+        margin: 0 5px
+
+//Choices
+.choices.choices__list--dropdown
+    border-color: $light-gray-color
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable
+    padding-right: 0
+
+.choices[data-type*=select-one].is-open::after
+    margin-top: 0
+    transform: rotate(-180deg)
+
+.choices[data-type*=select-one]::after
+    border: none
+    top: 42%
+    background: url('../resources/icons/arrow-down.svg') center/cover no-repeat
+    height: 8px
+    width: 8px
+    fill: $gray-color
+    transition: transform 0.3s ease, margin-top 0.3s ease
+
+.choices__inner
+    margin: 0
+    padding: 0
+    padding-bottom: 0
+    align-items: flex-end
+    min-height: 30px
+    background-color: $white-color
+
+.choices[data-type*=select-one] .choices__inner
+    padding-bottom: 0
+
+.choices__list--single
+    padding: 7px 7px 0 7px
+
+.choices__item
+    padding-right: 0
+    width: 100%
+    color: $gray-color
+    font-size: 14px
+    font-weight: 600
+    transition: background-color 0.3s ease
+    &.is-highlighted
+        background-color: $light-gray-color
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+    overflow: hidden
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after
+    display: none

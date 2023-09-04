@@ -1,0 +1,199 @@
+.private
+
+    &__breadcrumbs
+        font-size: 18px
+        color: $gray-color
+        margin-bottom: 40px
+        @media (max-width: 600px)
+            margin-bottom: 25px
+            font-size: 16px
+
+    &__title
+        font-weight: 700
+        font-size: 42px
+        color: $gray-color
+        margin-bottom: 20px
+        @media (max-width: 600px)
+            font-size: 36px
+
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        @media(max-width: 600px)
+            flex-direction: column
+
+    &__tabs
+        flex: 0 1 25%
+        padding-right: 80px
+        @media(max-width: $md2)
+            flex: 0 1 35%
+        @media(max-width: $md3)
+            flex: 0 1 45%
+        @media(max-width: 600px)
+            width: 100%
+            padding-right: 0
+            margin-bottom: 30px
+
+    &__tab-btn
+        display: inline-flex
+        width: 100%
+        align-items: center
+        justify-content: flex-start
+        padding: 10px
+        border-bottom: 1px solid $gray-color
+        transition: color 0.3s ease, border-bottom 0.3s ease
+        &.active
+            color: $pink-color
+            border-bottom: 1px solid $pink-color
+
+    &__content
+        padding: 20px
+        flex: 1 1 75%
+        background-color: $light-gray-color
+        @media(max-width: $md2)
+            flex: 1 1 65%
+        @media(max-width: $md3)
+            flex: 1 1 55%
+        @media(max-width: 600px)
+            flex: 1 1 100%
+            width: 100%
+            padding: 10px
+
+    &__info
+
+.info-private
+
+    &__personal-form,
+    &__address-form,
+    &__password-form
+
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        @media(max-width: $md2)
+            flex-direction: column
+
+    &__column
+        flex: 1 1 50%
+        @media(max-width: $md2)
+            width: 100%
+
+    &__label
+        display: block
+        margin-bottom: 10px
+        width: 300px
+        @media(max-width: 420px)
+            width: 100%
+
+    &__name
+        display: block
+        padding-left: 10px
+        margin-bottom: 3px
+        width: 100%
+        span
+            color: $pink-color
+
+    &__input
+        font-family: 'PFDinTextCompPro'
+        display: block
+        border: 1px solid $gray-color
+        border-radius: 20px
+        width: 100%
+        height: 32px
+        padding: 0 10px
+        outline: none
+        transition: border 0.3s ease, box-shadow 0.3s ease
+        &:focus
+            border: none
+            box-shadow: 0 0 2px 2px rgba(252, 45, 183, 0.4)
+        &::placeholder
+            color: $gray-color
+            font-size: 14px
+            font-family: 'PFDinTextCompPro'
+
+    &__add
+        margin-top: 30px
+        @media(max-width: 600px)
+            margin-top: 20px
+
+    &__text
+        padding-left: 10px
+        span
+            color: $pink-color
+
+    &__change
+        margin-top: 30px
+        display: flex
+        justify-content: flex-start
+
+    &__btn
+        height: 35px
+        padding: 0 20px
+
+    &__list
+
+    &__item
+        &:not(:last-child)
+            margin-bottom: 10px
+
+.discount-private
+    padding-left: 10px
+    margin-bottom: 30px
+
+    &__value
+        font-weight: 700
+        font-size: 20px
+
+.private-order
+
+    &__btn
+        display: flex
+        flex-direction: column
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+        &.active
+            color: $pink-color
+
+    &__item
+
+    &__number
+        margin-right: 15px
+
+    &__date
+
+    &__body
+        margin-top: 15px
+        display: none
+
+.body-private
+
+    &__list
+
+    &__item
+        padding-left: 20px
+
+    &__link
+        color: $gray-color
+        margin: 0 30px
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+
+    &__quantity,
+    &__num
+        color: $gray-color
+
+    &__repeat
+        display: flex
+        justify-content: flex-start
+        padding-left: 20px
+        margin-bottom: 10px
+
+    &__btn
+        font-size: 14px
+        margin-top: 15px
+        height: 25px
+        padding: 0 10px

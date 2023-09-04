@@ -1,0 +1,144 @@
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 1000
+    background-color: rgba(21, 21, 21, 0.75)
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.1s ease, visibility 0.1s ease
+    &.active
+        opacity: 1
+        visibility: visible
+        transition: opacity 0.3s ease, visibility 0.3s ease
+
+    &__close
+        position: absolute
+        top: 30px
+        right: 30px
+        cursor: pointer
+        color: $white-color
+        font-size: 26px
+        background-color: transparent
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+
+    &__content
+        border-radius: 10px
+        width: 360px
+        padding: 30px
+        background-color: $white-color
+
+    &__form_login,
+    &__form_callback,
+    &__form_study,
+    &__registration_individual,
+    &__registration_company
+        display: none
+        &.active
+            display: block
+
+    &__form_callback,
+    &__form_study
+        .form-modal__btns
+            justify-content: center
+
+.form-modal
+
+    &__title
+        color: $gray-color
+        font-weight: 700
+        font-size: 24px
+        text-align: center
+        margin-bottom: 20px
+
+    &__content
+        width: 100%
+
+    &__item
+        display: block
+        &:not(:last-child)
+            margin-bottom: 15px
+
+    &__input
+        width: 100%
+        height: 30px
+        outline: none
+        padding: 0 10px
+        color: $gray-color
+        font-size: 12px
+        background-color: $light-gray-color
+        // border: 1px solid $gray-color
+        border-radius: 10px
+        transition: box-shadow 0.3s ease 0s
+        &:focus
+            box-shadow: 0 0 2px 2px rgba(252, 45, 183, 0.4)
+
+    &__name
+        display: block
+        padding-left: 10px
+        margin-bottom: 3px
+        span
+            color: $gray-color
+
+    &__checkbox
+        cursor: pointer
+        &:checked + .checkbox-tag
+            &::after
+                top: 3px
+
+    &__tag
+        font-size: 16px
+        line-height: 120%
+        cursor: pointer
+        padding-left: 25px
+        &::before
+            top: 0
+        &::after
+            top: 3px
+        a
+            font-weight: 700
+            color: $gray-color
+            transition: color 0.3s ease 0s
+            @media (any-hover: hover)
+                &:hover
+                    color: $pink-color
+
+    &__btn
+        margin-top: 15px
+        flex: 0 0 40%
+        height: 35px
+        border-radius: 10px
+
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 20px
+
+    &__forgot
+        margin-bottom: 15px
+        font-size: 14px
+        color: $gray-color
+        transition: color 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                color: $pink-color
+
+    &__btns
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.registration-modal
+
+    &__text
+        text-align: center
+        line-height: 120%

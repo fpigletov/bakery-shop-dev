@@ -1,0 +1,76 @@
+<div class="modal modal-login">
+    <button type="button" class="modal__close icon-close" aria-label="Закрыть окно"></button>
+    <div class="modal__content">
+        <form action="#" method="POST" class="modal__form modal__form_login form-modal">
+            <h2 class="form-modal__title">Личный кабинет</h2> 
+            <div class="form-modal__content">
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Логин</span>
+                    <input class="form-modal__input" name="Login" type="text" data-validate-field="login">
+                </label>
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Пароль</span>
+                    <input class="form-modal__input" name="Password" type="password" data-validate-field="password">
+                </label>  
+                <div class="form-modal__bottom">
+                    <label class="form-modal__item">
+                        <input name="Password-checkbox[]" type="checkbox" class="form-modal__checkbox checkbox" value="Сохранить_пароль">
+                        <span class="form-modal__tag checkbox-tag">Сохранить пароль</span>
+                    </label>
+                    <a href="#" class="form-modal__forgot">Забыли пароль?</a>
+                </div> 
+            </div> 
+            <div class="form-modal__btns">
+                <button type="submit" class="form-modal__btn btn">ВОЙТИ</button>
+                <button type="butto" class="form-modal__btn btn">РЕГИСТРАЦИЯ</button>
+            </div>            
+        </form> 
+        <form action="#" method="POST" class="modal__form modal__form_callback form-modal">
+            <h2 class="form-modal__title">Заказать обратный звонок</h2> 
+            <div class="form-modal__content">
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Имя</span>
+                    <input class="form-modal__input" name="Name" type="text" data-validate-field="name">
+                </label>
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Мобильный телефон</span>
+                    <input class="form-modal__input" name="Phone" type="tel" data-validate-field="phone">
+                </label>
+            </div> 
+            <div class="form-modal__btns">
+                <button type="submit" class="form-modal__btn btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>            
+        </form> 
+        <form action="#" method="POST" class="modal__form modal__form_study form-modal">
+            <h2 class="form-modal__title">Записаться на обучение</h2> 
+            <div class="form-modal__content">
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Название курса</span>
+                    <input class="form-modal__input" name="Course" type="text" data-validate-field="course">
+                </label>
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Имя</span>
+                    <input class="form-modal__input" name="Name" type="text" data-validate-field="name">
+                </label>                
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Мобильный телефон</span>
+                    <input class="form-modal__input" name="Phone" type="tel" data-validate-field="phone">
+                </label>
+                <label class="form-modal__item">
+                    <span class="form-modal__name">Email</span>
+                    <input class="form-modal__input" name="Email" type="email" data-validate-field="email">
+                </label>                
+            </div> 
+            <div class="form-modal__btns">
+                <button type="submit" class="form-modal__btn btn">Записаться</button>
+            </div>            
+        </form> 
+        <div class="modal__registration modal__registration_individual registration-modal">
+            <p class="registration-modal__text">Спасибо! Письмо для подтверждения регистрации отправлено на ваш Email!</p>
+        </div>
+        <div class="modal__registration modal__registration_company registration-modal">
+            <p class="registration-modal__text">Спасибо! Мы свяжемся с вами для заключения договора!</p>
+        </div>
+    </div>
+</div>
+

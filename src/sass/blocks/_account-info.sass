@@ -1,0 +1,26 @@
+.account-info
+
+    &__title
+        font-weight: 700
+        font-size: 42px
+        color: $gray-color
+        margin-bottom: 20px
+
+    &__body
+        display: grid
+        grid-template-columns: 30% 70%
+
+    &__column
+        border: 1px solid $gray-color
+        &:not(:last-child)
+            border-right: none
+
+    &__row
+        padding: 10px
+        &:not(:last-child)
+            border-bottom: 1px solid $gray-color
+
+    &__breadcrumbs
+        font-size: 18px
+        color: $gray-color
+        margin-bottom: 40px

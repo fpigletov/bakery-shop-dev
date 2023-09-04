@@ -1,0 +1,46 @@
+.popular
+    background-color: $light-gray-color
+
+    &__title
+        text-align: center
+        margin-bottom: 60px
+        @media(max-width: $md4)
+            margin-bottom: 40px
+
+    &__slider
+        position: relative
+        padding: 15px 18px 15px 12px
+
+    &__wrapper
+
+    &__slide
+
+    &__product
+
+    &__arrow
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 40px
+        height: 40px
+        border-radius: 100%
+        z-index: 10
+
+        &_prev
+            left: 0
+            // transform: translateX(-50%)
+
+        &_next
+            right: 0
+            // transform: translateX(50%)
+
+    &__view-all
+        display: flex
+        justify-content: center
+        margin-top: 50px
+        @media(max-width: $md4)
+            margin-top: 20px
+
+    &__btn
+        height: 40px
+        padding: 5px 25px
